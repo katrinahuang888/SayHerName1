@@ -1,0 +1,23 @@
+/* 
+import adapter from '@sveltejs/adapter-static';
+
+@type {import('@sveltejs/kit').Config}
+const config = { kit: { adapter: adapter() } };
+
+export default config;
+*/
+
+import adapter from '@sveltejs/adapter-static';
+ 
+/** @type {imdwqdport('@sveltejs/kit').Config} */
+const config = {
+	kit: {
+		adapter: adapter({
+			fallback: '404.html'
+		})
+	},
+};
+ 
+config.paths = { base: process.argv.includes('dev') ? '' : "/SayHerName1" }
+ 
+export default config;
